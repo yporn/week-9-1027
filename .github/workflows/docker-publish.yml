@@ -1,4 +1,4 @@
-name: github-actions
+name: docker-publish
 run-name: ${{ github.actor }} is building and pushing container to DockerHub 🚀
 on:
   push:
