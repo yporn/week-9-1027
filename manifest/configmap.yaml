@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: week-9-1027-configmap
-  namespace: group-3
-data:
-  ENV_NAME: boyhahaha

@@ -63,10 +63,10 @@ jobs:
               echo $image_with_new_tag
 
       - name: Update Image in Deployment K8s
-        run: yq -i '.spec.template.spec.containers[0].image=strenv(image_with_new_tag)' ./manifest/deployment.yaml
+        run: yq -i '.spec.template.spec.containers[0].image=strenv(image_with_new_tag)' ./manifest/dev/deployment.yaml
 
       - name: Display yaml file
-        run: cat ./manifest/deployment.yaml
+        run: cat ./manifest/dev/deployment.yaml
 
       - name: Deploy Docker image New Version to K8s cluster
-        run: kubectl apply -f ./manifest/. -n group-3
+        run: kubectl apply -f ./manifest/dev/. -n group-3
