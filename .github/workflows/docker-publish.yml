@@ -6,7 +6,7 @@ on:
       - develop
 env: 
   NEW_TAG_IMAGE: 1.0.0
-  
+
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -63,10 +63,10 @@ jobs:
               echo $image_with_new_tag
 
       - name: Update Image in Deployment K8s
-        run: yq -i '.spec.template.spec.containers[0].image=strenv(image_with_new_tag)' ./manifest/dev/deployment.yaml
+        run: yq -i '.spec.template.spec.containers[0].image=strenv(image_with_new_tag)' ./manifest/deployment.yaml
 
       - name: Display yaml file
-        run: cat ./manifest/dev/deployment.yaml
+        run: cat ./manifest/deployment.yaml
 
       - name: Deploy Docker image New Version to K8s cluster
-        run: kubectl apply -f ./manifest/dev/. -n group-3
+        run: kubectl apply -f ./manifest/. -n develop
