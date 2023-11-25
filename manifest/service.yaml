@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tcc-nodejs-service
+  name: week-9-1027-service
   namespace: develop
 spec:
   selector:
-    app: tcc-nodejs
+    app: week-9-1027
   ports:
     - protocol: TCP
       port: 80

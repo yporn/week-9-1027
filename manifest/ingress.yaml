@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: tcc-nodejs-ingress
+  name: week-9-1027-ingress
   namespace: develop
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: tcc-nodejs-service
+                name: week-9-1027-service
                 port:
                   number: 80

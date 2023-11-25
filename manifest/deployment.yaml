@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tcc-nodejs-deployment
+  name: week-9-1027-deployment
   namespace: develop
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tcc-nodejs
+      app: week-9-1027
   template:
     metadata:
       labels:
-        app: tcc-nodejs
+        app: week-9-1027
     spec:
       containers:
-        - name: tcc-nodejs
-          image: thanapongsj/tcc-nodejs:7af9fdfb183729b0e14302b4a168ee761b7328bf
+        - name: week-9-1027
+          image: ypornwisa/week-9-1027:develop
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
@@ -23,5 +23,5 @@ spec:
             - name: ENV_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: tcc-nodejs-configmap
+                  name: week-9-1027-configmap
                   key: ENV_NAME

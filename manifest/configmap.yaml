@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: tcc-nodejs-configmap
+  name: week-9-1027-configmap
   namespace: develop
 data:
   ENV_NAME: boyhahaha
