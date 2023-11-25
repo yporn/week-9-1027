@@ -14,14 +14,7 @@ spec:
         app: week-9-1027
     spec:
       containers:
-        - name: week-9-1027
-          image: ypornwisa/week-9-1027:develop
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 3000
-          env:
-            - name: ENV_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: week-9-1027-configmap
-                  key: ENV_NAME
+      - name: week-9-1027
+        image: ypornwisa/week-9-1027:develop
+        ports:
+        - containerPort: 3000
