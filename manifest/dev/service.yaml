@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: week-9-1027-service
+  namespace: group-3
+spec:
+  selector:
+    app: week-9-1027
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP

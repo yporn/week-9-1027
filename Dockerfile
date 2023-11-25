@@ -1,5 +1,11 @@
-FROM golang:1.21.3-bullseye
-COPY main.go .
-RUN go build ./main.go
-ENTRYPOINT [ "./main" ]
+FROM node:19-alpine
 
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

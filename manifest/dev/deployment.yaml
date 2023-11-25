@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: week-9-1027-deployment
+  namespace: group-3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: week-9-1027
+  template:
+    metadata:
+      labels:
+        app: week-9-1027
+    spec:
+      containers:
+      - name: week-9-1027
+        image: ypornwisa/week-9-1027:develop
+        ports:
+        - containerPort: 3000
