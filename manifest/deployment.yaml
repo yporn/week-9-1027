@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: week-9-1027-deployment
-  namespace: develop
+  namespace: group-3
 spec:
   replicas: 1
   selector:
